@@ -918,6 +918,10 @@ class basic_parse_context : private ErrorHandler {
   FMT_CONSTEXPR ErrorHandler error_handler() const { return *this; }
 };
 
+typedef basic_parse_context<char> format_parse_context;
+typedef basic_parse_context<wchar_t> wformat_parse_context;
+
+// DEPRECATED!
 typedef basic_parse_context<char> parse_context;
 typedef basic_parse_context<wchar_t> wparse_context;
 
@@ -1013,7 +1017,8 @@ class context_base {
 
  public:
   basic_parse_context<char_type> &parse_context() { return parse_context_; }
-  basic_format_args<Context> args() const { return args_; }
+  basic_format_args<Context> args() const { return args_; } // DEPRECATED!
+  basic_format_arg<Context> arg(unsigned id) const { return args_.get(id); }
 
   internal::error_handler error_handler() {
     return parse_context_.error_handler();

@@ -1,3 +1,6 @@
+2018.11.28:
+* changed: merge with the latest library repository changes at commit #a5a9805a91502d392cd927f4a368a187145bfd9a (2018.11.26) from https://github.com/fmtlib/fmt/commits/master
+
 2018.11.19:
 * changed: merge with the latest library repository changes at commit #6c95fb35623e47562fdc7f6d8023688290b6f786 (2018.11.18) from https://github.com/fmtlib/fmt/commits/master
 

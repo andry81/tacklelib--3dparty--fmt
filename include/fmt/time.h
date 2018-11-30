@@ -1,6 +1,6 @@
 // Formatting library for C++ - time formatting
 //
-// Copyright (c) 2012 - 2016, Victor Zverovich
+// Copyright (c) 2012 - present, Victor Zverovich
 // All rights reserved.
 //
 // For the license information refer to format.h.
@@ -22,7 +22,56 @@ inline null<> localtime_r FMT_NOMACRO(...) { return null<>(); }
 inline null<> localtime_s(...) { return null<>(); }
 inline null<> gmtime_r(...) { return null<>(); }
 inline null<> gmtime_s(...) { return null<>(); }
+
+// Parses a put_time-like format string and invokes handler actions.
+template <bool IS_CONSTEXPR, typename Char, typename Handler>
+FMT_CONSTEXPR void parse_datetime_format(
+    basic_string_view<Char> format_str, Handler &&handler) {
+  auto begin = format_str.data();
+  auto end = begin + format_str.size();
+  auto ptr = begin;
+  while (ptr != end) {
+    auto c = *ptr;
+    if (c == '}') break;
+    if (c != '%') {
+      ++ptr;
+      continue;
+    }
+    if (begin != ptr)
+      handler.on_text(begin, ptr);
+    c = *++ptr;
+    begin = ptr;
+    switch (c) {
+    case '%':
+      handler.on_text(ptr, ptr + 1);
+      break;
+    // Day of the week:
+    case 'a':
+      handler.on_abbr_weekday();
+      break;
+    case 'A':
+      handler.on_full_weekday();
+      break;
+    case 'w':
+      handler.on_dec0_weekday();
+      break;
+    case 'u':
+      handler.on_dec1_weekday();
+      break;
+    // Month:
+    case 'b': case 'h':
+      handler.on_abbr_month();
+      break;
+    case 'B':
+      handler.on_full_month();
+      break;
+      // TODO: parse more format specifiers
+    }
+  }
+  if (begin != ptr)
+    handler.on_text(begin, ptr);
 }
+} // namespace internal
 
 // Thread-safe replacement for std::localtime
 inline std::tm localtime(std::time_t time) {
@@ -46,19 +95,20 @@ inline std::tm localtime(std::time_t time) {
 
     bool fallback(int res) { return res == 0; }
 
+#if !FMT_MSC_VER
     bool fallback(internal::null<>) {
       using namespace fmt::internal;
       std::tm *tm = std::localtime(&time_);
       if (tm) tm_ = *tm;
       return tm != FMT_NULL;
     }
+#endif
   };
   dispatcher lt(time);
-  if (lt.run())
-    return lt.tm_;
   // Too big time values may be unsupported.
-  FMT_THROW(format_error("time_t value out of range"));
-  return {};
+  if (!lt.run())
+    FMT_THROW(format_error("time_t value out of range"));
+  return lt.tm_;
 }
 
 // Thread-safe replacement for std::gmtime
@@ -83,18 +133,19 @@ inline std::tm gmtime(std::time_t time) {
 
     bool fallback(int res) { return res == 0; }
 
+#if !FMT_MSC_VER
     bool fallback(internal::null<>) {
       std::tm *tm = std::gmtime(&time_);
       if (tm) tm_ = *tm;
       return tm != FMT_NULL;
     }
+#endif
   };
   dispatcher gt(time);
-  if (gt.run())
-    return gt.tm_;
   // Too big time values may be unsupported.
-  FMT_THROW(format_error("time_t value out of range"));
-  return {};
+  if (!gt.run())
+    FMT_THROW(format_error("time_t value out of range"));
+  return gt.tm_;
 }
 
 namespace internal {
