@@ -1,5 +1,5 @@
 * README_EN.txt
-* 2018.11.19
+* 2019.08.29
 * fmt
 
 1. DESCRIPTION
@@ -13,25 +13,27 @@
 -------------------------------------------------------------------------------
 fmt sources fork from: https://github.com/fmtlib/fmt
 
-From authors:
+From author:
 
   {fmt} is an open-source formatting library for C++. It can be used as a safe
-  and fast alternative to (s)printf and IOStreams.
+  and fast alternative to (s)printf and iostreams.
 
-  Documentation
-    This is a development branch that implements the C++ standards proposal
-    P0645 Text Formatting. Released versions are available from the Releases
-    page.
+  Documentation:
+    https://fmt.dev/6.0.0/
+
+  Q&A: ask questions on StackOverflow with the tag fmt.
+    https://stackoverflow.com/questions/tagged/fmt
 
   Features
     * Replacement-based format API with positional arguments for localization.
     * Format string syntax similar to the one of str.format in Python.
     * Safe printf implementation including the POSIX extension for positional
       arguments.
+    * Implementation of C++20 std::format.
     * Support for user-defined types.
-    * High speed: performance of the format API is close to that of glibc's
-      printf and better than the performance of IOStreams. See Speed tests and
-      Fast integer to string conversion in C++.
+    * High performance: faster than common standard library implementations of
+      printf and iostreams. See Speed tests and Fast integer to string
+      conversion in C++.
     * Small code size both in terms of source code (the minimum configuration
       consists of just three header files, core.h, format.h and format-inl.h)
       and compiled code. See Compile time and code bloat.
@@ -43,17 +45,23 @@ From authors:
       permissive BSD license
     * Portability with consistent output across platforms and support for older
       compilers.
-    * Clean warning-free codebase even on high warning levels (-Wall -Wextra
-      -pedantic).
+    * Clean warning-free codebase even on high warning levels
+      (-Wall -Wextra -pedantic).
     * Support for wide strings.
-    * Optional header-only configuration enabled with the FMT_HEADER_ONLY macro.
+    * Optional header-only configuration enabled with the FMT_HEADER_ONLY
+      macro.
+
+  See the documentation for more details.
 
 -------------------------------------------------------------------------------
 2. LICENSE
 -------------------------------------------------------------------------------
-BSD 2-Clause "Simplified" License
+MIT license.
 (see included text file "LICENSE.rst" or
-https://github.com/fmtlib/fmt/blob/master/LICENSE.rst)
+https://github.com/fmtlib/fmt/blob/6.0.0/ChangeLog.rst )
+
+NOTE:
+  Switch from BSD 2-Clause "Simplified" License, see the `ChangeLog.rst`.
 
 -------------------------------------------------------------------------------
 3. REPOSITORIES
