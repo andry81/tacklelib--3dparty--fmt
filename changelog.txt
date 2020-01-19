@@ -1,3 +1,6 @@
+2020.01.19:
+* changed: merge with the latest library repository changes at commit #071794ec654a7c503b6214de4032c8ec8a07440b (2019.12.04) from https://github.com/fmtlib/fmt/releases/tag/6.1.1
+
 2019.11.24:
 * changed: readme update
 

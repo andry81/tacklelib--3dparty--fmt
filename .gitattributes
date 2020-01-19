@@ -111,7 +111,6 @@ include/fmt/ostream.h -text
 include/fmt/posix.h -text
 include/fmt/printf.h -text
 include/fmt/ranges.h -text
-include/fmt/safe-duration-cast.h -text
 src/format.cc -text
 src/posix.cc -text
 support/Android.mk -text
@@ -146,6 +145,9 @@ test/color-test.cc -text
 test/compile-error-test/CMakeLists.txt -text
 test/compile-test.cc -text
 test/core-test.cc -text
+test/cuda-test/CMakeLists.txt -text
+test/cuda-test/cpp14.cc -text
+test/cuda-test/cuda-cpp14.cu -text
 test/custom-formatter-test.cc -text
 test/find-package-test/CMakeLists.txt -text
 test/find-package-test/main.cc -text
