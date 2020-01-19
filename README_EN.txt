@@ -1,5 +1,5 @@
 * README_EN.txt
-* 2019.11.24
+* 2020.01.19
 * fmt
 
 1. DESCRIPTION
@@ -19,7 +19,7 @@ From author:
   and fast alternative to (s)printf and iostreams.
 
   Documentation:
-    https://fmt.dev/6.0.0/
+    https://fmt.dev/6.1.2/
 
   Q&A: ask questions on StackOverflow with the tag fmt.
     https://stackoverflow.com/questions/tagged/fmt
@@ -58,7 +58,7 @@ From author:
 -------------------------------------------------------------------------------
 MIT license.
 (see included text file "LICENSE.rst" or
-https://github.com/fmtlib/fmt/blob/6.0.0/ChangeLog.rst )
+https://github.com/fmtlib/fmt/blob/6.1.2/ChangeLog.rst )
 
 NOTE:
   Switch from BSD 2-Clause "Simplified" License, see the `ChangeLog.rst`.
