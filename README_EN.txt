@@ -1,6 +1,6 @@
 * README_EN.txt
-* 2020.01.19
-* fmt
+* 2020.01.21
+* tacklelib--3dparty--fmt
 
 1. DESCRIPTION
 2. LICENSE
