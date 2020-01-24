@@ -1,5 +1,5 @@
 * README_EN.txt
-* 2020.01.21
+* 2020.01.24
 * tacklelib--3dparty--fmt
 
 1. DESCRIPTION
@@ -19,7 +19,7 @@ From author:
   and fast alternative to (s)printf and iostreams.
 
   Documentation:
-    https://fmt.dev/6.1.2/
+    https://fmt.dev
 
   Q&A: ask questions on StackOverflow with the tag fmt.
     https://stackoverflow.com/questions/tagged/fmt
