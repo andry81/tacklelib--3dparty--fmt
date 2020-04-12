@@ -1,0 +1,35 @@
+2020.04.12:
+* new: branch with the library repository changes at release 6.2.0 commit #9bdd1596cef1b57b9556f8bef32dc4a32322ef3e (2020.04.05) from https://github.com/fmtlib/fmt/releases/tag/6.2.0 (https://fmt.dev/6.2.0/ )
+* changed: readme update
+
+2020.02.10:
+* changed: readme update
+
+2020.01.24:
+* changed: cutted off the version reference from the readme file as may change frequently
+
+2020.01.21:
+* changed: readme file
+
+2020.01.19:
+* changed: merge with the library repository changes at release 6.1.2 commit #f94b7364b9409f05207c3af3fa4666730e11a854 (2019.12.11) from https://github.com/fmtlib/fmt/releases/tag/6.1.2 (https://fmt.dev/6.1.2/ )
+
+2020.01.19:
+* changed: merge with the library repository changes at release 6.1.1 commit #071794ec654a7c503b6214de4032c8ec8a07440b (2019.12.04) from https://github.com/fmtlib/fmt/releases/tag/6.1.1 (https://fmt.dev/6.1.1/ )
+
+2019.11.24:
+* changed: readme update
+
+2019.08.29:
+* changed: merge with the library repository changes at release 6.0.0 commit #7512a55aa3ae309587ca89668ef9ec4074a51a1f (2019.08.26) from https://github.com/fmtlib/fmt/releases/tag/6.0.0 (https://fmt.dev/6.0.0/ )
+* changed: readme update
+
+2018.11.28:
+* changed: merge with the library repository changes at commit #a5a9805a91502d392cd927f4a368a187145bfd9a (2018.11.26) from https://github.com/fmtlib/fmt/commits/master
+
+2018.11.19:
+* changed: merge with the library repository changes at commit #6c95fb35623e47562fdc7f6d8023688290b6f786 (2018.11.18) from https://github.com/fmtlib/fmt/commits/master
+
+2018.11.13:
+* new: changelog
+* new: initial sources fork
