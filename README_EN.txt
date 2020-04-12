@@ -67,13 +67,13 @@ NOTE:
 3. REPOSITORIES
 -------------------------------------------------------------------------------
 Primary:
-  * https://sf.net/p/tacklelib/3dparty--fmt/HEAD/tree/trunk
-    https://svn.code.sf.net/p/tacklelib/3dparty--fmt/trunk
+  * https://sf.net/p/tacklelib/3dparty--fmt/HEAD/tree/branches
+    https://svn.code.sf.net/p/tacklelib/3dparty--fmt/branches
 First mirror:
-  * https://github.com/andry81/tacklelib--3dparty--fmt/tree/trunk
+  * https://github.com/andry81/tacklelib--3dparty--fmt/tree/branches
     https://github.com/andry81/tacklelib--3dparty--fmt.git
 Second mirror:
-  * https://bitbucket.org/andry81/tacklelib-3dparty-fmt/src/trunk
+  * https://bitbucket.org/andry81/tacklelib-3dparty-fmt/src/branches
     https://bitbucket.org/andry81/tacklelib-3dparty-fmt.git
 
 -------------------------------------------------------------------------------

@@ -1,4 +1,7 @@
 2020.04.12:
+* changed: changes store retarget to branches instead of the trunk to be able to apply changes to multiple versions
+
+2020.04.12:
 * new: branch with the library repository changes at release 6.2.0 commit #9bdd1596cef1b57b9556f8bef32dc4a32322ef3e (2020.04.05) from https://github.com/fmtlib/fmt/releases/tag/6.2.0 (https://fmt.dev/6.2.0/ )
 * changed: readme update
 
